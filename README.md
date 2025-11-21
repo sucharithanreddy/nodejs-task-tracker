@@ -47,51 +47,10 @@ docker compose up --build
 
 Once running:
 
-Component	URL
+# Component	URL
 Task Tracker UI	http://localhost:3001
 
 API Base URL	http://localhost:3001/api/tasks
-🧠 API Endpoints
-➕ Create a Task
-POST /api/tasks
-Content-Type: application/json
-
-{
-  "title": "Buy milk"
-}
-
-📄 Get All Tasks
-GET /api/tasks
-
-
-Response example:
-
-[
-  {
-    "id": 1,
-    "title": "Buy milk",
-    "created_at": "2025-02-22T10:00:00.000Z"
-  }
-]
-
-🗄️ Working With the Database
-
-To open the Postgres CLI inside the container:
-
-docker exec -it postgres-db psql -U postgres -d db
-
-
-Then you can run commands like:
-
-SELECT * FROM tasks;
-
-# Development Notes
-
-The Node app uses pg to connect to PostgreSQL.
-
-Data persists thanks to Docker named volumes.
-
-The frontend communicates with the backend using fetch().
 
 # Stop the App
 
@@ -103,8 +62,3 @@ docker compose down
 To stop and delete data volumes:
 
 docker compose down -v
-
-
-
-
-🌱 Small projects grow fast. This one is your seed—now watch it evolve.
